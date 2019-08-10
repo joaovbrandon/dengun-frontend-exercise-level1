@@ -1,0 +1,57 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  z-index: 99999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  -webkit-animation: appear .3s;
+  animation: appear .3s;
+
+  .modal-opacity {
+    background-color: $opacity-bg;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: $white;
+    padding: 20px 50px;
+
+    .close {
+      color: $dark-grey;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+
+    h2 {
+      color: $black;
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $dark-grey;
+      font-size: 1em;
+    }
+  }
+
+  @keyframes appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}

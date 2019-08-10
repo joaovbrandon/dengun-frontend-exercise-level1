@@ -1,0 +1,21 @@
+<div id="donation-item--{{id}}" class="donation-item donation-item--{{id}}">
+  <div class="title">
+    <h2>{{name}} -- #{{id}}</h2>
+    <button onclick="share({{id}})">Share</button>
+  </div>
+
+  <img src="{{image}}" alt="{{name}}" />
+
+  <ul class="infos">
+    <li><strong>Lost in</strong> {{lostDate}}</li>
+    <li><strong>Owner</strong> {{ownerName}}</li>
+    <li><strong>Location</strong> {{location}}</li>
+  </ul>
+
+  <div class="donate-content">
+    <strong class="donated-value">{{donatedAmount}}</strong> donated
+    <button onclick="donate({{id}})">Donate</button>
+  </div>
+
+  <a href="tel:{{phone}}" class="phone-content"><span class="phone-number">{{phone}}</span> CALL</a>
+</div>

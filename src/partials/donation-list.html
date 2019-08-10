@@ -1,0 +1,20 @@
+<div id="donation-list" class="donation-list">
+  {{^donationList}}
+    <p>No lost cats! :)</p>
+  {{/donationList}}
+
+  {{#donationList}}
+    ${
+      require('mustache-loader!./donation-item.html')({
+        id: `{{id}}`,
+        name: `{{name}}`,
+        lostDate: `{{lostDate}}`,
+        ownerName: `{{ownerName}}`,
+        location: `{{location}}`,
+        donatedAmount: `{{donatedAmount}}`,
+        phone: `{{phone}}`,
+        image: `{{image}}`,
+      })
+    }
+  {{/donationList}}
+</div>

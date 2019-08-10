@@ -1,0 +1,156 @@
+.donation-item {
+  display: flex;
+  flex: 1 0 22%;
+  max-width: 22%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 15px;
+  text-align: left;
+  position: relative;
+  border: 2px solid $dark-grey;
+  border-radius: 4px;
+  background-color: $white;
+  color: $black;
+
+  @include lg {
+    flex: 1 0 30%;
+    max-width: 30%;
+  }
+
+  @include md {
+    flex: 1 0 40%;
+    max-width: 40%;
+  }
+
+  @include sm {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+
+  button {
+    color: $donate-btn-color;
+    background-color: $donate-btn-bg-color;
+    border-radius: 4px;
+    position: absolute;
+    padding: 0 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    transition: all .3s;
+    font-size: .9em;
+
+    @include sm {
+      font-size: .7em;
+    }
+
+    &:hover {
+      background-color: $donate-btn-bg-color-hover;
+    }
+
+    &:disabled {
+      background-color: $disabled-btn-bg-color;
+      color: $disabled-btn-color;
+
+      &:hover {
+        background-color: $disabled-btn-bg-color-hover;
+      }
+    }
+  }
+
+  .title {
+    background: $opacity-bg;
+    color: $white;
+    font-size: 1em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 12px;
+
+    @include lg {
+      font-size: .8em;
+    }
+
+    @include md {
+      font-size: 1em;
+    }
+
+    button {
+      font-size: .8em;
+      border-color: 2px solid $white;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .infos {
+    font-size: 1em;
+    padding: 15px 20px;
+    line-height: 1.6;
+    text-align: right;
+    width: 100%;
+
+    @include sm {
+      font-size: 1.1em;
+    }
+
+    strong {
+      font-weight: bold;
+      float: left;
+    }
+  }
+
+  .donate-content {
+    background-color: $grey;
+    width: 100%;
+    font-size: 1em;
+    padding: 10px 20px;
+    position: relative;
+
+    @include customScreen(1390) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    button {
+      top: 5px;
+      bottom: 5px;
+
+      @include customScreen(1390) {
+        font-size: .9em;
+        position: initial;
+        width: 90%;
+        padding: 5px;
+        margin-top: 5px;
+      }
+    }
+
+    strong {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+  }
+
+  .phone-content {
+    background-color: $call-btn-bg-color;
+    color: $call-btn-color;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: all .3s;
+
+    @include sm {
+      font-size: 1.2em;
+    }
+
+    &:hover {
+      background-color: $call-btn-bg-color-hover;
+    }
+  }
+}
