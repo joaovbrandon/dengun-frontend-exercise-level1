@@ -286,7 +286,8 @@ footer {
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 12px; }
+    padding: 12px;
+    z-index: 1; }
     @media (max-width: 992px) {
       .donation-item .title {
         font-size: .8em; } }
@@ -296,8 +297,22 @@ footer {
     .donation-item .title button {
       font-size: .8em;
       border-color: 2px solid #fff; }
-  .donation-item img {
-    max-width: 100%; }
+  .donation-item .picture {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    z-index: 0; }
+    .donation-item .picture:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%; }
+    .donation-item .picture img {
+      background-color: rgba(0, 0, 0, 0.3);
+      height: 100%;
+      position: absolute;
+      left: 0; }
   .donation-item .infos {
     font-size: 1em;
     padding: 15px 20px;
