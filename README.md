@@ -4,12 +4,18 @@
 See here [joaovbrandon.github.io/dengun-frontend-exercise-level1](https://joaovbrandon.github.io/dengun-frontend-exercise-level1/).
 
 ## Run
+_Use Node v14.0.0_
+
 Run `npm i` then `npm start`
 
 ## Build
+_Use Node v14.0.0_
+
 Run `npm run build`
 
 ## Deploy to Github Pages
+_Use Node v14.0.0_
+
 Run `npm run deploy`
 
 # The Exercise
